@@ -1,12 +1,16 @@
 for _ in range(int(input())):
     n, k = map(int,input().split())
     s = input()
+    
+    distances = []
 
-    slo = float('inf')
+    # get list of distances
+
+
     cnt = 0
-    for c in s:
-        if c == '1' and slo > (k-1):
-            slo = 1
-            cnt += 1
-        elif c != '1':
-            slo += 1
+    if distances:
+        for x in distances:
+            cnt += 1 if x >= (k-1) else 0
+        cnt += 1
+
+    print(cnt)
